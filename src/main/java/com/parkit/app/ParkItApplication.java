@@ -2,9 +2,10 @@ package com.parkit.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class ParkItApplication {
+public class ParkItApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(ParkItApplication.class, args);
