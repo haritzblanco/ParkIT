@@ -25,7 +25,8 @@ public class Parking {
     private String name;
     private String Address;
     private int capacity;
-    private float price;
-
+    private float priceperhour;
+    private float priceperday;
+    private float pricepermonth;
 
 }
