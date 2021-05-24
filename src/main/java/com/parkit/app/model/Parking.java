@@ -16,11 +16,7 @@ import java.util.List;
 public class Parking {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-
-    @OneToMany
-    private List<Sensor> sensors;
 
     private String name;
     private String Address;

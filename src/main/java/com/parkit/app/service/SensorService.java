@@ -62,4 +62,8 @@ public class SensorService {
         }
         return control;
     }
+
+    public List<Sensor> findSensorsByParkingId(int parkingId){
+        return sensorRepo.findSensorsByParking_Id(parkingId);
+    }
 }
