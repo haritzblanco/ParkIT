@@ -27,15 +27,43 @@ public class viewController {
         this.sensorService = sensorService;
     }
 
-    @RequestMapping(value = "/",method = RequestMethod.GET)
-   public String view(ModelMap modelMap){
+    @RequestMapping(value = {"/index.hmtl","/"},method = RequestMethod.GET)
+   public String viewIndex(ModelMap modelMap){
 
         List<Parking> parkings = parkingService.findAllParking();
 
         modelMap.addAttribute("parkings", parkings);
 
-
         return "index";
+    }
+
+    @RequestMapping(value = "/page1.html",method = RequestMethod.GET)
+    public String viewSanMames(ModelMap modelMap){
+
+        List<Sensor> sensors = sensorService.findSensorsByParkingId(1);
+
+        modelMap.addAttribute("sensors", sensors);
+        return "page1";
+    }
+
+    @RequestMapping(value = "/page2.html",method = RequestMethod.GET)
+    public String viewMoyua(ModelMap modelMap){
+
+        List<Sensor> sensors = sensorService.findSensorsByParkingId(2);
+
+        modelMap.addAttribute("sensors", sensors);
+
+        return "page2";
+    }
+
+    @RequestMapping(value = "/page3.html",method = RequestMethod.GET)
+    public String viewAldeZaharra(ModelMap modelMap){
+
+        List<Sensor> sensors = sensorService.findSensorsByParkingId(3);
+
+        modelMap.addAttribute("sensors", sensors);
+
+        return "page3";
     }
 
 }
